@@ -56,7 +56,7 @@ def text(message):
     		bot.reply_to(message, "Отправь желаемую редкость, но не наглей пожалуйста 🔵 🟢 🟣 🟡 ⚫", reply_markup=markup)
   elif message.text in ["Обычный🔵", "Редкий🟢", "Эпический🟣", "Легендарный🟡", "IMPOSSIBLE☠️🍀"]:
     			bot.send_message(message.chat.id, "Выбрано, ожидайте")
-    			bot.send_message(ID, f'''*@{message.from_user.username} хочет редкость {message.text}*''', parse_mode="Markdown")
+    			bot.send_message(ID, f'''*@{message.from_user.username} *({message.from_user.first_name})* хочет редкость {message.text}*''', parse_mode="Markdown")
     			log = open('предложения.txt', 'a+', encoding='utf-8')
     			log.write(f'''@{message.from_user.username} хочет редкость {message.text}''')
     			log.close()
