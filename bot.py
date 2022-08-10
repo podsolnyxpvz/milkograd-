@@ -1,4 +1,3 @@
-
 import telebot
 import random
 from telebot import types
@@ -25,15 +24,13 @@ def start(message):
         bot.send_sticker(message.chat.id, "CAACAgIAAxkBAAEFekFi7eXkYOFVDJOhFEKVIhVM8RVbTQACAQEAAladvQoivp8OuMLmNCkE")
         bot.send_message(message.chat.id, f'''Привет {message.from_user.first_name}👋! Чтобы начать, нажимай на кнопки снизу⬇️''',  reply_markup=markup)
         
-        
-        
 @bot.message_handler(content_types=['text'])
 def text(message):
   if message.text == 'Открыть🃏':
   	photo = open('cards/' + random.choice(os.listdir('cards')), 'rb')
   	bot.send_photo(message.chat.id, photo, reply_to_message_id=message.message_id)
   if message.text == 'Карты и их редкость🗂️':
-  	bot.reply_to(message, '''<b>КАРТЫ И ИХ РЕДКОСТЬ🃏:</b>\n\n@Krebsonplay - обычный🔵\n@mertvvnytrip - обычный🔵\n@OPOOOOOOOOOOO - обычный🔵\n@Blevota_kozla - обычный🔵\n@Nenabobibi - обычный🔵\n@ijustwntualltoshtup - обычный🔵\n@garry_boy21 - обычный🔵\n\n@Ziro69 - редкий🟢\n@sidr228 - редкий🟢\n@wills_z00 - редкий🟢\n@nekokaktus - редкий🟢\n@siwemt - редкий🟢\n@Kilkq111 - редкий🟢\n@doziz - редкий🟢\n@Bumagoed редкий🟢\n@ZXCpro100chel - редкий🟢\n@ksenofoni - редкий🟢\n@Artil_glas - редкий🟢\n@guidoomista - редкий🟢\n@Tap1ck - редкий🟢\n@zzu_61 - редкий🟢\n@djxnddsjs - редкий🟢\n@lriska_Milk - редкий🟢\n@fonnre - редкий🟢\n@Expirience_Gold - редкий🟢\n@shirona_shirona - редкий🟢\n@Western_shock - редкий🟢\n@BLET_SUPE - редкий🟢\n@ahuennie_kirieshki - редкий🟢\n@JoRriK7 - редкий🟢\n@Epplot - редкий🟢\n@Dramoed-редкий🟢\n\n@Letun104 - эпический🟣\n@hofhoo - эпический🟣\n@Izolenta_Kypera - эпический🟣\n@SMsneez - эпический🟣\n@xx_loshad_xx - эпический🟣\n@myBroyyyyy - эпический🟣\n@xawar228 - эпический🟣\n@windings - эпический🟣\n@tetris_ines - эпический🟣\n@bibizyanya - эпический🟣\n@MechusYt - эпический🟣\n@OKUASU_ABCHIHBA - эпический🟣\n@zzu_62 - эпический🟣\n@legenda_pes - эпический🟣\n@elfrvioF - эпический🟣\n\n@gera_oF - легендарныыыый🟡\n@tetbanjojosnus - легендарный🟡\n@omiomiomiomiomiomi - легендарный🟡\n@Crade9801 - легендарный🟡\n@Krutoibober95 - легендарный🟡\n@SkocthFactit_ines - легендарный🟡\n@blag0o - легендарный🟡\n@xsv19 - легендарный🟡\n@mashaluy - легендарный🟡\n@gegestudio - легендарный🟡\n\n<b>@agentmoloko - IMPOSSIBLE☠️🍀\n@cakaoF - IMPOSSIBLE☠️🍀</b>\n\n<b>Карт на данный момент: 58</b>''', parse_mode = 'HTML')
+  	bot.reply_to(message, '''<b>КАРТЫ И ИХ РЕДКОСТЬ🃏:</b>\n\n@Krebsonplay - обычный🔵\n@mertvvnytrip - обычный🔵\n@OPOOOOOOOOOOO - обычный🔵\n@Blevota_kozla - обычный🔵\n@Nenabobibi - обычный🔵\n@ijustwntualltoshtup - обычный🔵\n@garry_boy21 - обычный🔵\n\n@Ziro69 - редкий🟢\n@sidr228 - редкий🟢\n@wills_z00 - редкий🟢\n@nekokaktus - редкий🟢\n@siwemt - редкий🟢\n@Kilkq111 - редкий🟢\n@doziz - редкий🟢\n@Bumagoed редкий🟢\n@ZXCpro100chel - редкий🟢\n@ksenofoni - редкий🟢\n@Artil_glas - редкий🟢\n@guidoomista - редкий🟢\n@Tap1ck - редкий🟢\n@djxnddsjs - редкий🟢\n@lriska_Milk - редкий🟢\n@fonnre - редкий🟢\n@Expirience_Gold - редкий🟢\n@shirona_shirona - редкий🟢\n@Western_shock - редкий🟢\n@BLET_SUPE - редкий🟢\n@ahuennie_kirieshki - редкий🟢\n@JoRriK7 - редкий🟢\n@Epplot - редкий🟢\n@Dramoed-редкий🟢\n\n@zzu_61 - эпический🟣\n@Letun104 - эпический🟣\n@hofhoo - эпический🟣\n@Izolenta_Kypera - эпический🟣\n@SMsneez - эпический🟣\n@xx_loshad_xx - эпический🟣\n@myBroyyyyy - эпический🟣\n@xawar228 - эпический🟣\n@windings - эпический🟣\n@tetris_ines - эпический🟣\n@bibizyanya - эпический🟣\n@MechusYt - эпический🟣\n@OKUASU_ABCHIHBA - эпический🟣\n@zzu_62 - эпический🟣\n@legenda_pes - эпический🟣\n@elfrvioF - эпический🟣\n\n@gera_oF - легендарныыыый🟡\n@tetbanjojosnus - легендарный🟡\n@omiomiomiomiomiomi - легендарный🟡\n@Crade9801 - легендарный🟡\n@Krutoibober95 - легендарный🟡\n@SkocthFactit_ines - легендарный🟡\n@blag0o - легендарный🟡\n@xsv19 - легендарный🟡\n@mashaluy - легендарный🟡\n@gegestudio - легендарный🟡\n\n<b>@agentmoloko - IMPOSSIBLE☠️🍀\n@cakaoF - IMPOSSIBLE☠️🍀</b>\n\n<b>Карт на данный момент: 58</b>''', parse_mode = 'HTML')
   if message.text == 'Предложить свою карту🗣️📝':
     	markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
     	item5=types.KeyboardButton(f'''@{message.from_user.username}''')
@@ -93,7 +90,5 @@ def text(message):
   	markup.add(item3)
   	bot.send_sticker(message.chat.id, "CAACAgIAAxkBAAEFg3pi8plQBCqCb3i4O2JjVeQbDUXFwwAC8wADVp29Cmob68TH-pb-KQQ", reply_to_message_id=message.message_id)
   	bot.reply_to(message, f'''Отменено...''',  reply_markup=markup)
-  	
-  
 	
 bot.infinity_polling(none_stop=True)
