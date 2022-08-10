@@ -6,7 +6,7 @@ import os
 import asyncio
 import time 
 
-bot = telebot.TeleBot('5514650900:AAHZghYZTVBQV4D2PUEIUxXc8-KVeghQ8Jg')
+bot = telebot.TeleBot('5514650900:AAEA4wpHfZ0csYXUjI1ZaelnxIMjjS68Wmg')
 print ("█▀ ▀█▀ ▄▀█ █▀█ ▀█▀ █▀▀ █▀▄\n▄█ ░█░ █▀█ █▀▄ ░█░ ██▄ █▄▀")
 ID = '-1001608307734'
           
