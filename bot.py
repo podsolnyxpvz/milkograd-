@@ -55,8 +55,6 @@ def text(message):
   elif message.text in ["Обычный🔵", "Редкий🟢", "Эпический🟣", "Легендарный🟡", "IMPOSSIBLE☠️🍀"]:
     			bot.send_message(message.chat.id, "Выбрано, ожидайте")
     			bot.send_message(ID, f'''*@{message.from_user.username} *({message.from_user.first_name})* хочет редкость {message.text}*''', parse_mode="Markdown")
-    		g 
-
     			markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
     			item1=types.KeyboardButton("Открыть🃏")
     			item2=types.KeyboardButton("Карты и их редкость🗂️")
